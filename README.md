@@ -1,1 +1,2 @@
-# racunalniski-praktikum
+# Računalniški praktikum
+# Nismo še imeli vaj :)
