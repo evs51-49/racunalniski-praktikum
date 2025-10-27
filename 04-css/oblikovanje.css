@@ -56,9 +56,22 @@ h2 {
     text-align: left;
     float: right;
     margin-left: 2em;
+    
 }
 
 .slika img {
     width: 100%;
     height: auto;
 }
+
+.slika p {
+    margin-top: 0.05em
+}
+
+.slika p:last-child {
+    font-size: 0.8em;
+    background-color: rgb(89, 186, 208);
+    border-radius: 50%;
+    
+}
+
