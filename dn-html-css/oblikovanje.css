@@ -19,6 +19,7 @@ izvorna koda dokumenta veljaven in urejen CSS.
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
     line-height: 1.5;
     max-width: 40em;
     margin: auto;
@@ -41,6 +42,10 @@ blockquote {
     float: right;
     margin-right: 2em;
     padding: 1em;
+    background-color: rgb(51,81,126,0.2);
+    border-width: 1px;
+    border-style: double;
+    border-color: rgb(51, 81, 126);
 }
 blockquote p {
     font-style: italic;
@@ -61,4 +66,9 @@ dl dt {
     font-weight: bold;
     float: left;
     margin-right: 1em;
+}
+
+.slika img {
+    width: max-content;
+    height: auto;
 }
