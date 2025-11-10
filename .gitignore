@@ -1,7 +1,6 @@
 *.aux
 *.fdb_latexmk
 
-# LaTeX
 *.aux
 *.bbl
 *.blg
