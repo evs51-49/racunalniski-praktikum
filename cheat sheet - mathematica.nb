@@ -1,0 +1,2394 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[    116775,       2386]
+NotebookOptionsPosition[    115101,       2350]
+NotebookOutlinePosition[    115660,       2371]
+CellTagsIndexPosition[    115617,       2368]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ StyleBox["HTML    -   ",
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]],
+ StyleBox["a speedruning guide",
+  FontSize->24,
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]]
+}], "Title",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellChangeTimes->{{3.9782641792101173`*^9, 3.9782642052228413`*^9}, {
+  3.978264352273489*^9, 3.9782645785393124`*^9}, {3.9782647246742496`*^9, 
+  3.978265132637209*^9}, {3.9782669483150654`*^9, 3.978266989951788*^9}},
+ Background->RGBColor[
+  0.95, 0.43, 0.96, 
+   0.33],ExpressionUUID->"3074e4d4-e5c1-e343-8746-f41e3dffe8a7"],
+
+Cell[TextData[{
+ "A/N: ",
+ StyleBox["za bol\[SHacek]o preglenost sm po&pred < > dajala presledke - v \
+dejanski kodi jih ne sme bit (pomoje). \n\t   In addition to that sm v\
+\[CHacek]asih za bol\[SHacek]o preglednost med zna\[CHacek]ko in attributom \
+pisala 2 presledka",
+  FontFamily->"Calibri",
+  FontSize->11],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.9782656685317516`*^9, 3.9782656982971*^9}, {
+  3.978265800086214*^9, 3.978265863138666*^9}, {3.9782781021957645`*^9, 
+  3.978278116895113*^9}, {3.9782781684691353`*^9, 
+  3.9782782067651997`*^9}},ExpressionUUID->"d86675a4-0c16-0f49-b388-\
+f0d77dac1ed3"],
+
+Cell[TextData[{
+ "- Za\[CHacek]ne\[SHacek] z : < !",
+ StyleBox["DOCTYPE",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ "  html >\n     \t- Kuj za temu (preferable v naslednem linu) da\[SHacek]:   \
+< ",
+ StyleBox["html",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " >            (",
+ StyleBox["in \[CHacek]ist na koncu doca damo \[SHacek]e",
+  FontSize->12],
+ " </",
+ StyleBox["html",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " > )\n     - Pol mor\[SHacek] met : <",
+ StyleBox["head",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ ">   (in na koncu </",
+ StyleBox["head ",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ ">)\n\t- v glavo da\[SHacek] naslov : <",
+ StyleBox[" ",
+  FontColor->RGBColor[0., 0., 0.]],
+ StyleBox["title ",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ "> ____ </",
+ StyleBox["title",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " >\n    \t- + stvar za branje (kodiranje?) znakov : < ",
+ StyleBox["meta",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " charset = \[OpenCurlyDoubleQuote]____\[CloseCurlyDoubleQuote] >   (usually \
+bo ",
+ StyleBox["UTF - 8",
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ ")\n    \t\t\t\t\t- A/N: ",
+ StyleBox["tuki je prov/ok da ni na koncu </___>",
+  FontSize->12],
+ "\n\t- + neki kar ne vem za kaj smo vklu\[CHacek]l v na\[SHacek] prvi ever \
+doc :   \n   \t\t< ",
+ StyleBox["script",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " id =",
+ StyleBox["\"MathJax - script\"",
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ " async src =",
+ StyleBox["\"https : // sdn . jsdelivr . net/npm/mathjax@4/tex - mml - chtml \
+. js\"",
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ " > </",
+ StyleBox["script",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " >\n    \t- + lah da\[SHacek] not tud \"link\" na css doc za oblikovanje : \
+< ",
+ StyleBox["link",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " rel =",
+ StyleBox["\"stylesheet\[CloseCurlyDoubleQuote]",
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ " href = ",
+ StyleBox["\"oblikovanje . css\"",
+  FontVariations->{"Underline"->True},
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ " >         \n    \t\t\t\t\t- ",
+ StyleBox["ta \[OpenCurlyDoubleQuote]oblikovanje.css\[CloseCurlyDoubleQuote] \
+je sam placeholder za dejanski doc name k ga mor\[SHacek] not vpisat  ",
+  FontSize->12],
+ StyleBox["\n    \t\t\t\t\t- A/N: ",
+  FontSize->15],
+ StyleBox["tuki je prov/ok da ni na koncu </___> ",
+  FontSize->12],
+ StyleBox["\n    \t\t\t\t\t- A/N: ",
+  FontSize->15],
+ StyleBox["teh linkov na oblikovanje // teh css oblikovanj je lahko ve\
+\[CHacek] / ve\[CHacek] razli\[CHacek]nih lahko uklu\[CHacek]\[SHacek] not v \
+doc\n    \t\t\t\t\t\t   ",
+  FontSize->12]
+}], "Text",
+ CellChangeTimes->{{3.9782641792101173`*^9, 3.9782642052228413`*^9}, {
+  3.978264352273489*^9, 3.9782645785393124`*^9}, {3.9782647246742496`*^9, 
+  3.9782651442304287`*^9}, {3.9782651985949955`*^9, 3.9782652452586555`*^9}, {
+  3.9782654868994427`*^9, 3.9782654896467113`*^9}, {3.9782660321896954`*^9, 
+  3.978266037024502*^9}, {3.9782661290562553`*^9, 3.9782661481343117`*^9}, {
+  3.9782661841738033`*^9, 3.9782662321540985`*^9}, {3.978266353565605*^9, 
+  3.9782664511333447`*^9}, {3.9782724979480495`*^9, 3.978272655077978*^9}, {
+  3.978277246266865*^9, 3.9782772642254944`*^9}, {3.9782773058941555`*^9, 
+  3.978277311242491*^9}, {3.9782773554673767`*^9, 3.9782774078247337`*^9}, {
+  3.97827813298238*^9, 3.9782781582715454`*^9}, {3.978278225101467*^9, 
+  3.978278245262623*^9}},ExpressionUUID->"1c4b42d8-d9f3-1546-a736-\
+084c9e3c230a"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9782659303249454`*^9, 
+  3.978265932128927*^9}},ExpressionUUID->"2cb3810e-3e09-d54e-83f5-\
+23f7b47e3ce1"],
+
+Cell[TextData[{
+ "- Pol je pa \[OpenCurlyDoubleQuote]dejanski\[CloseCurlyDoubleQuote] \
+dokument. Da\[SHacek]:    < ",
+ StyleBox["body ",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ ">  (in na koncu </",
+ StyleBox["body",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " > )\n- Tukej je obviously besedilo spletne strani in \[CHacek]e so ti \
+bogovi milostljivi bi teoreti\[CHacek]no lahko v ve\[CHacek]ini pr\[SHacek]u \
+\[CHacek]ez sam z: \n\t\t   < ",
+ StyleBox["p",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " >   [besedilo paragrafa]    </",
+ StyleBox["p",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " >  \n\t\t- A/N: ",
+ StyleBox["To je obviously treba naredit za vsak paragraf posebej",
+  FontSize->12],
+ "\t\t\n\t\t- A/N: ",
+ StyleBox["Nism jih \[SHacek]e na\[SHacek]tela tko myb povem \[SHacek]e: Ta \
+zna\[CHacek]ka ( < p > ___  < /p > ) ti nardi paragraf... quite \
+self-explanatory in the name",
+  FontSize->12],
+ "\n- Na na\[SHacek]o veliko \[ZHacek]alost bogovi niso milostljivi in zato \
+mor\[SHacek] predn gremo naprej vedt \[SHacek]e: \n\t\t1)\tznotrej telih (< \
+__ >   ~~~~   </__ > ) stvari ma\[SHacek] lahko \[SHacek]e ve\[CHacek] teh \
+stvari:  \n\t\t\t\t",
+ StyleBox["< __ >   ~~~ ",
+  FontWeight->"Bold"],
+ " ",
+ " ",
+ StyleBox["< __ > \[Hacek]\[Hacek]\[Hacek]\[Hacek]\[Hacek] < /__ >",
+  FontSize->13],
+ "  ",
+ StyleBox["~~~~~ </__ >",
+  FontWeight->"Bold"],
+ "     \n\t\t2)\tobviously kot smo \[ZHacek]e v uvodu vidl ma\[SHacek] lahko \
+tud znotrej enga samga ( < __ > )  ve\[CHacek] stvari - easy primer je za \
+link:\n\t\t\t\t  < ",
+ StyleBox["a",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " href=",
+ StyleBox["\[OpenCurlyDoubleQuote]https:// nekej pa\[CHacek] - link\
+\[CloseCurlyDoubleQuote]",
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ " > [besedilo ki bo mel link \[OpenCurlyDoubleQuote]embeddan\
+\[CloseCurlyDoubleQuote] in it] </",
+ StyleBox["a",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " >\n\t\t\t\t  - A/N: ",
+ StyleBox["Ta href=\[OpenCurlyDoubleQuote]link\[CloseCurlyDoubleQuote] \
+besedilo se ne bo actually pokazal - sam uno kar je ",
+  FontSize->12],
+ StyleBox["znotrej",
+  FontSize->12,
+  FontSlant->"Italic",
+  FontVariations->{"Underline"->True},
+  Background->RGBColor[
+   0.7529411764705882, 0.7529411764705882, 0.7529411764705882]],
+ StyleBox[" ",
+  FontSize->12,
+  Background->RGBColor[
+   0.7529411764705882, 0.7529411764705882, 0.7529411764705882]],
+ StyleBox[" se bo pokazal   < __  ____ >  ",
+  FontSize->12],
+ StyleBox["~~~~",
+  FontSize->12,
+  FontWeight->"Bold",
+  Background->RGBColor[
+   0.7529411764705882, 0.7529411764705882, 0.7529411764705882]],
+ StyleBox[" </__ > ",
+  FontSize->12],
+ "    \n\t\t\t\t  - A/N: ",
+ StyleBox["Ta link lahko ka\[ZHacek]e na actual spletno stran (as shown \
+above) al pa na nek plac v [tem] docu/html-spletni-strani. \n\t\t\t\t  \t\t   \
+     To nardi\[SHacek] tko da napi\[SHacek]e\[SHacek]   < ",
+  FontSize->12],
+ StyleBox["a",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" href= ",
+  FontSize->12],
+ StyleBox["\[OpenCurlyDoubleQuote]#[beseda (usually naslov or sum), ki si jo \
+predhodno v docu dal - da bo link na kamor te bo vrgl]>",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox[":\n\t\t\t\t  \t\t        <__  id=",
+  FontSize->12],
+ StyleBox["\[OpenCurlyDoubleQuote][ta beseda - sm te bo polinkal]\
+\[CloseCurlyDoubleQuote]",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox[">  ~~~  </__ >",
+  FontSize->12],
+ "\n- Ok to je basically to kar je \[OpenCurlyDoubleQuote]teorije\
+\[CloseCurlyDoubleQuote] -- zdj lahko sam na\[SHacek]tejem vse zna\[CHacek]ke \
+k jih mormo vedt oz. smo \[ZHacek]e sre\[CHacek]al:"
+}], "Text",
+ CellChangeTimes->{{3.978265952166771*^9, 3.978265983699747*^9}, {
+   3.9782662588307915`*^9, 3.9782662847159157`*^9}, {3.9782663285223255`*^9, 
+   3.978266332398155*^9}, {3.9782664945291805`*^9, 3.9782666654567738`*^9}, {
+   3.978266728777872*^9, 3.978266799942808*^9}, {3.978266880608135*^9, 
+   3.9782669439047546`*^9}, {3.978267017393656*^9, 3.978267264632551*^9}, {
+   3.978267317598709*^9, 3.9782673919881687`*^9}, {3.978267431475231*^9, 
+   3.9782675259347496`*^9}, {3.9782675634886093`*^9, 
+   3.9782677797684536`*^9}, {3.978267832439049*^9, 3.9782680230266056`*^9}, {
+   3.978268077499653*^9, 3.9782680926665707`*^9}, {3.978268160945404*^9, 
+   3.97826822488089*^9}, {3.978268761695118*^9, 3.978268854582264*^9}, {
+   3.9782699201084137`*^9, 3.9782699996602097`*^9}, {3.978270033747383*^9, 
+   3.97827007704163*^9}, {3.978270147244932*^9, 3.978270245663677*^9}, {
+   3.978270290416561*^9, 3.978270404160021*^9}, {3.9782710025456104`*^9, 
+   3.9782710286266003`*^9}, {3.978275919019724*^9, 3.9782759225531387`*^9}, 
+   3.9782768248299065`*^9},ExpressionUUID->"8415c5c2-4b94-af40-a90d-\
+8d8a3e4e2762"],
+
+Cell[TextData[{
+ "\t\t\[Rule] paragrafi:\t\t< ",
+ StyleBox["p ",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ "> ___  </",
+ StyleBox["p",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " > \t\n\t\t\[Rule] naslovi: \t\t< ",
+ StyleBox["h1",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " > ___ </",
+ StyleBox["h1",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " > \t\n\t\t\t-\[RuleDelayed] A/N: ",
+ StyleBox["(lahko tud h2/3/4/5... za manj\[SHacek]e in manj\[SHacek]e oz. \
+pod(pod(pod(..))) naslove)  ",
+  FontSize->12],
+ StyleBox["\n\t\t\[Rule] section: \t\t< ",
+  FontSize->15],
+ StyleBox["section",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" > ___ </",
+  FontSize->15],
+ StyleBox["section ",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[">\n\t\t\t-\[RuleDelayed] A/N: ",
+  FontSize->15],
+ StyleBox["I suspect da bi meaning tega mogu bit dost bl intuitiven kot mi \
+actually je, \[CHacek]e dobr pomisle\[SHacek]. V dokumentacije je napisan: \
+\[OpenCurlyDoubleQuote]The section element \t\t\t\t\t       represents a \
+generic section of a document or application. A section, in this context, is \
+a thematic grouping of content. Each section should be \t\t\t\t\t       \
+identified, typically by including a heading ( h1- h6 element) as a child of \
+the section element.\[CloseCurlyDoubleQuote]",
+  FontSize->12],
+ "\n\t\t\[Rule] odebeljena beseda/e: \t\t< ",
+ StyleBox["strong",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " > ___  </",
+ StyleBox["strong",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ ">\n\t\t\[Rule] link: \t\t\t\t\t< ",
+ StyleBox["a",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " href=",
+ StyleBox["\[OpenCurlyDoubleQuote]link\[CloseCurlyDoubleQuote]",
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ " > ___  </",
+ StyleBox["a",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " >\n\t\t\t-\[RuleDelayed] A/N: ",
+ StyleBox["ta (href=)\[OpenCurlyDoubleQuote]link\[CloseCurlyDoubleQuote] je \
+lahko link na spletno stran al pa na mestu v tem docu - as explained \
+literally just one section above -- z (href=)\[OpenCurlyDoubleQuote]#link\
+\[CloseCurlyDoubleQuote]",
+  FontSize->12],
+ "\n\t\t\t-\[RuleDelayed] continuation A/N: ",
+ StyleBox["ok ampak just for my piece of mind and good organisation let\
+\[CloseCurlyQuote]s say it again: ",
+  FontSize->12],
+ StyleBox["\n\t\t\t\t",
+  FontSize->15],
+ StyleBox["< ",
+  FontSize->12],
+ StyleBox["a",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" href= ",
+  FontSize->12],
+ StyleBox["\[OpenCurlyDoubleQuote]#[beseda (usually naslov or sum), ki si jo \
+predhodno v docu dal - da bo link na kamor te bo vrgl",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox["> \t\n\t\t\t\t\tFor the record, ta \[OpenCurlyDoubleQuote]link\
+\[CloseCurlyDoubleQuote] more zgledat/nardi\[SHacek] ",
+  FontSize->12],
+ StyleBox["tkole",
+  FontSize->12,
+  Background->RGBColor[
+   0.8117647058823529, 0.7372549019607844, 0.8392156862745098]],
+ StyleBox[":",
+  FontSize->12],
+ StyleBox[" \n\t\t\t\t",
+  FontSize->15],
+ StyleBox["<_",
+  FontSize->12],
+ StyleBox["[vseen kera zna\[CHacek]ka]",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox["_  ",
+  FontSize->12],
+ StyleBox["id=",
+  FontSize->12,
+  Background->RGBColor[
+   0.8117647058823529, 0.7372549019607844, 0.8392156862745098]],
+ StyleBox["\[OpenCurlyDoubleQuote][ta beseda - sm te bo polinkal]\
+\[CloseCurlyDoubleQuote]",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509],
+  Background->RGBColor[
+   0.8117647058823529, 0.7372549019607844, 0.8392156862745098]],
+ StyleBox[">  ~~~  </_",
+  FontSize->12],
+ StyleBox["[ta ista nepomembna zna\[CHacek]ka]",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox["_ >",
+  FontSize->12],
+ "\n\t\t\[Rule] ordered (=o\[SHacek]tevil\[CHacek]en) list: \t< ",
+ StyleBox["ol ",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ ">                                        ",
+ StyleBox["(na koncu tud rab </",
+  FontSize->12],
+ StyleBox["ol",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" >)",
+  FontSize->12],
+ "\n\t\t\t-\[RuleDelayed] ",
+ StyleBox["elementi tega rabjo met prej&pol:    ",
+  FontSize->12],
+ StyleBox["< ",
+  FontSize->15],
+ StyleBox["li",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" > ___  </",
+  FontSize->15],
+ StyleBox["li",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" >        ",
+  FontSize->15],
+ StyleBox["(ko si vse na\[SHacek]tel da\[SHacek] \[SHacek]e ",
+  FontSize->12],
+ StyleBox["</ol >",
+  FontSize->15],
+ StyleBox[" ",
+  FontSize->12],
+ StyleBox["od prej",
+  FontSize->12,
+  FontVariations->{"Underline"->True}],
+ StyleBox[")",
+  FontSize->12],
+ StyleBox["      \n\t\t\[Rule] ma\[SHacek] tud unordered (=neo\[SHacek]tevil\
+\[CHacek]en) list. Gimmick tega je da za razliko od ordered lista se ti kle \
+ni treba zapomnt dveh \t\t\t\t     razli\[CHacek]nih zna\[CHacek]k (za za\
+\[CHacek]etek in elemente) ampak kr from the get-go \[ZHacek]a\[CHacek]ne\
+\[SHacek] z na\[SHacek]tevanjem \[OpenCurlyDoubleQuote]elementov\
+\[CloseCurlyDoubleQuote]:\n\t\t\t\t< ",
+  FontSize->15],
+ StyleBox["ul",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" > ___  </",
+  FontSize->15],
+ StyleBox["ul",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" > \n\t\t\t-\[RuleDelayed] A/N:",
+  FontSize->15],
+ StyleBox[" Edin mo\[ZHacek]n gimmick k se ga lahko spomnem da bi ga lahko \
+zajebu je da to [pomoje] ne sme bit znotrej paragrafa ( < p >    </p >  )",
+  FontSize->12],
+ StyleBox["\n\t\t\[Rule] \[SHacek]e ta tretja vrsta lista je definition list. \
+Gimmick tega je si mor\[SHacek] 3 razli\[CHacek]ne zna\[CHacek]ke zapomnt. Za\
+\[CHacek]ne\[SHacek] ga z:       \n\t\t     \t\t< ",
+  FontSize->15],
+ StyleBox["dl",
+  FontSize->15,
+  FontColor->RGBColor[0., 0., 0.]],
+ StyleBox[" >            (",
+  FontSize->15],
+ StyleBox["in pol k kon\[CHacek]a\[SHacek]/na koncu lista da\[SHacek] \
+\[SHacek]e",
+  FontSize->12],
+ StyleBox[": </",
+  FontSize->15],
+ StyleBox["dl",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" > )\n\t\t\t-\[RuleDelayed] definition term ",
+  FontSize->15],
+ StyleBox["(n\[CHacek] tok special, sam mal odebeljena beseda je...)",
+  FontSize->12],
+ StyleBox[" nardi\[SHacek] z:   \t    < ",
+  FontSize->15],
+ StyleBox["dt",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" > ___  </",
+  FontSize->15],
+ StyleBox["dt",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" >\n\t\t\t-\[RuleDelayed] definition definition ",
+  FontSize->15],
+ StyleBox["(also n\[CHacek] tok special -- definicija definicije \
+pa\[CHacek]...)",
+  FontSize->12],
+ StyleBox[" nardi\[SHacek] z:    < ",
+  FontSize->15],
+ StyleBox["dd",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" > ___ </",
+  FontSize->15],
+ StyleBox["dd",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" >\n\t\t\[Rule] slikca/vstavljanje slike: \t<",
+  FontSize->15],
+ StyleBox["img",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" src= ",
+  FontSize->15],
+ StyleBox["\[OpenCurlyDoubleQuote]",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox["[relative path to the slikca - pa\[CHacek] ime + v keri mapi jo ma\
+\[SHacek] shranjeni in kako pridt do tm]",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox["\[CloseCurlyDoubleQuote]",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox[" > \n\t\t\t-\[RuleDelayed] A/N: ",
+  FontSize->15],
+ StyleBox["tuki je prov/ok da ni na koncu </___>  ",
+  FontSize->12],
+ StyleBox["\n\t\t\t-\[RuleDelayed] ",
+  FontSize->15],
+ StyleBox["Ta zna\[CHacek]ka ma lahko poleg tega \[SHacek]e tako imenovan \
+\[OpenCurlyDoubleQuote]alternative text\[CloseCurlyDoubleQuote] = text ki se \
+poka\[ZHacek]e \[CHacek]e je browser pi\[CHacek]ka in se odlo\[CHacek] ne \
+pokazat slike.  ",
+  FontSize->12],
+ StyleBox["\n\t\t\t      ",
+  FontSize->15],
+ StyleBox["To pol zgleda nekak tkole:  ",
+  FontSize->12],
+ StyleBox["<",
+  FontSize->15],
+ StyleBox["img",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" src=",
+  FontSize->15],
+ StyleBox["\[OpenCurlyDoubleQuote]",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox["[relative path to slikca]",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox["\[CloseCurlyDoubleQuote] ",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox[" alt= ",
+  FontSize->15],
+ StyleBox["\[OpenCurlyDoubleQuote]",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox["[to kar \[CHacek]\[SHacek] da ti napi\[SHacek]e \[CHacek]e je \
+browser pi\[CHacek]ka]",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox["\[CloseCurlyDoubleQuote]",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox[" >",
+  FontSize->15],
+ StyleBox["  ",
+  FontSize->12],
+ StyleBox["\n\t\t\[Rule] tabela. Za\[CHacek]ne\[SHacek] jo z: \t\t< ",
+  FontSize->15],
+ StyleBox["table",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" >             (in ko jo napi\[SHacek]e\[SHacek] da\[SHacek] na \
+konc </",
+  FontSize->15],
+ StyleBox["table",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" > )\n\t\t\t-\[RuleDelayed] ",
+  FontSize->15],
+ StyleBox["Separate celice-vrstice nardi\[SHacek] z:",
+  FontSize->12],
+ StyleBox["     < ",
+  FontSize->15],
+ StyleBox["td",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" >__",
+  FontSize->15],
+ StyleBox["[\[OpenCurlyDoubleQuote]stolpce\[CloseCurlyDoubleQuote] mam js na \
+vajah narjene s simply 3 presledki med individual \
+\[OpenCurlyDoubleQuote]stolpci\[CloseCurlyDoubleQuote]]",
+  FontSize->12],
+ StyleBox["__ </",
+  FontSize->15],
+ StyleBox["td",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" >\n\t\t\t-\[RuleDelayed] ",
+  FontSize->15],
+ StyleBox["Naslov tabele nardi\[SHacek]  tko da najprej nardi\[SHacek] eno \
+vrstico tabele in pol vanjo vrakne\[SHacek] \[SHacek]e",
+  FontSize->12],
+ StyleBox[": <",
+  FontSize->15],
+ StyleBox["th",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox["> [naslov] </",
+  FontSize->15],
+ StyleBox["th",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[">\n\t\t\t      ",
+  FontSize->15],
+ StyleBox["Altogether more naslov seprav zgledat tkole",
+  FontSize->12],
+ StyleBox[": < ",
+  FontSize->15],
+ StyleBox["td",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" >  < ",
+  FontSize->15],
+ StyleBox["th",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" > [naslov]  </",
+  FontSize->15],
+ StyleBox["th",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" >  </",
+  FontSize->15],
+ StyleBox["td",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" >\n\t\t\[Rule] \
+\[OpenCurlyDoubleQuote]koda\[CloseCurlyDoubleQuote] (",
+  FontSize->15],
+ StyleBox["ni tok special kt misle\[SHacek] -- for all intents and purposes \
+je to sam fancy na\[CHacek]in da ti pisavo spremeni as far as I\
+\[CloseCurlyQuote]m concerned",
+  FontSize->12],
+ StyleBox[")\n\t\t      Nardi\[SHacek] jo z: \t\t\t\t< ",
+  FontSize->15],
+ StyleBox["code",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" > ___  </",
+  FontSize->15],
+ StyleBox["code",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" > \n\t\t\[Rule] ",
+  FontSize->15],
+ StyleBox["(!Po tem ko si pogleda\[SHacek] css prid nazaj sm!)",
+  FontSize->15,
+  FontVariations->{"Underline"->True}],
+ StyleBox[" Stvarca k ubistvu ne pomen n\[CHacek] ampak jo rab\[SHacek] za \
+css - ker ti pomaga pogrupirat \t\t\t      stvari za hitro oblikovanje. \
+\[CapitalCHacek]e gre\[SHacek] gledat dokumentacijo za to grozoto je ta \
+pomembna stvar tole: \[OpenCurlyDoubleQuote]",
+  FontSize->15],
+ StyleBox["it\[CloseCurlyQuote]s used to group content so it \t\t\t   can be \
+easily styled using the class or id attributes, marking a section of a \
+document as being written in a different language (using the lang attribute), \
+and \t\t\t   so on.",
+  FontSize->12],
+ StyleBox["\[CloseCurlyDoubleQuote]. OK, seprav, ",
+  FontSize->15],
+ StyleBox["mi",
+  FontSize->15,
+  FontVariations->{"Underline"->True}],
+ StyleBox[" smo to delal z atributom (",
+  FontSize->15],
+ StyleBox["una stvar zravn zna\[CHacek]ke, \[SHacek]e znotrej istih <__ ___> ",
+  FontSize->12],
+ StyleBox[") class. Altogether je zgledal nkk tko:\n\t\t\t\t\t\t\t\t< ",
+  FontSize->15],
+ StyleBox["div",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox["  class= ",
+  FontSize->15],
+ StyleBox["\[OpenCurlyDoubleQuote][",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox["ime classa",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox["]\[CloseCurlyDoubleQuote]",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox[" >\n\t\t\t\t\t\t\t\t[stvar k ho\[CHacek]s da se oblikuje v stilu \
+tega specific classa. npr. <img src= \[OpenCurlyDoubleQuote]whtv\
+\[CloseCurlyDoubleQuote]>  ]\n\t\t\t\t\t\t\t\t</",
+  FontSize->15],
+ StyleBox["div",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" >\n\t\t\t-\[RuleDelayed] A/N: ",
+  FontSize->15],
+ StyleBox["ta presledek/pisanje v razli\[CHacek]ne vrstice ni pomembno \
+(pomoje) ampak je pa bolj pregledno \[CHacek]e tko dela\[SHacek]",
+  FontSize->12],
+ StyleBox["\n\t\t\t-\[RuleDelayed] A/N: ",
+  FontSize->15],
+ StyleBox["with the amount of trouble you go through for it you could say its \
+called <div ____> as a shorthand for DIVA hahaha! No? only funny to me? \t\t\t\
+\t\t\t       haaaa~    tough audience...",
+  FontSize->12],
+ StyleBox["\n\t\t\[Rule] ",
+  FontSize->15],
+ StyleBox["(!tud v povezavi z css - ampak to sm lowk \[ZHacek]e povedala v \
+\[OpenCurlyDoubleQuote]head\[CloseCurlyDoubleQuote] sectionu...!)",
+  FontSize->15,
+  FontVariations->{"Underline"->True}],
+ StyleBox[" css dokument za oblikovanje v html doc vklu\[CHacek]\[SHacek] z:\n\
+\t\t\t\t\t\t\t\t < ",
+  FontSize->15],
+ StyleBox["link",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" rel =",
+  FontSize->15],
+ StyleBox["\[CloseCurlyDoubleQuote]stylesheet\[CloseCurlyDoubleQuote]",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox[" href = ",
+  FontSize->15],
+ StyleBox["\[OpenCurlyDoubleQuote]oblikovanje . css\[CloseCurlyDoubleQuote]",
+  FontSize->15,
+  FontVariations->{"Underline"->True},
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox[" >         \n    \t\t\t-\[RuleDelayed] ",
+  FontSize->15],
+ StyleBox["ta \[OpenCurlyDoubleQuote]oblikovanje.css\[CloseCurlyDoubleQuote] \
+je sam placeholder za dejanski doc name k ga mor\[SHacek] not vpisat  ",
+  FontSize->12],
+ StyleBox["\n    \t\t\t-\[RuleDelayed] A/N: ",
+  FontSize->15],
+ StyleBox["tuki je prov/ok da ni na koncu </___> ",
+  FontSize->12],
+ StyleBox["\n    \t\t\t-\[RuleDelayed] A/N: ",
+  FontSize->15],
+ StyleBox["teh linkov na oblikovanje // teh css oblikovanj je lahko ve\
+\[CHacek] / ve\[CHacek] razli\[CHacek]nih lahko uklu\[CHacek]\[SHacek] not v \
+doc",
+  FontSize->12],
+ StyleBox["\n\t\t\[Rule]",
+  FontSize->15],
+ StyleBox["\n\t",
+  FontSize->12],
+ "\n\[CapitalCHacek]e se \[SHacek]e kej spomnem da bi blo faj dodat bom \
+dodala kle.\n\n\n"
+}], "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellDingbat->None,
+ CellChangeTimes->{{3.978265952166771*^9, 3.978265983699747*^9}, {
+   3.9782662588307915`*^9, 3.9782662847159157`*^9}, {3.9782663285223255`*^9, 
+   3.978266332398155*^9}, {3.9782664945291805`*^9, 3.9782666654567738`*^9}, {
+   3.978266728777872*^9, 3.978266799942808*^9}, {3.978266880608135*^9, 
+   3.9782669439047546`*^9}, {3.978267017393656*^9, 3.978267264632551*^9}, {
+   3.978267317598709*^9, 3.9782673919881687`*^9}, {3.978267431475231*^9, 
+   3.9782675259347496`*^9}, {3.9782675634886093`*^9, 
+   3.9782677797684536`*^9}, {3.978267832439049*^9, 3.9782680230266056`*^9}, {
+   3.978268077499653*^9, 3.9782680926665707`*^9}, {3.978268160945404*^9, 
+   3.97826822488089*^9}, {3.978268761695118*^9, 3.9782688926149406`*^9}, {
+   3.9782689451298046`*^9, 3.9782689764083576`*^9}, {3.9782690240991497`*^9, 
+   3.978269046316803*^9}, {3.978269124655676*^9, 3.9782695515481815`*^9}, {
+   3.9782695862038517`*^9, 3.978269748864788*^9}, {3.978269784821512*^9, 
+   3.978269873227249*^9}, 3.9782699071129093`*^9, {3.9782704158347282`*^9, 
+   3.9782705510217495`*^9}, {3.9782707745382366`*^9, 3.978270892517248*^9}, {
+   3.978271088422655*^9, 3.978271462286394*^9}, {3.9782715354688034`*^9, 
+   3.978271878887594*^9}, {3.978271913266985*^9, 3.978272012000681*^9}, {
+   3.978272050700449*^9, 3.9782724283552303`*^9}, 3.9782724681810246`*^9, {
+   3.978272764941841*^9, 3.9782730755422153`*^9}, {3.9782732038636684`*^9, 
+   3.9782733461601257`*^9}, {3.9782734013297462`*^9, 3.978273666932831*^9}, {
+   3.9782737845601673`*^9, 3.978273864962351*^9}, {3.978273941720047*^9, 
+   3.978274022346977*^9}, {3.9782741385711975`*^9, 3.978274223512018*^9}, {
+   3.978274275710472*^9, 3.9782747675551434`*^9}, {3.97827486928121*^9, 
+   3.9782751174419575`*^9}, {3.978275250375374*^9, 3.978275315944561*^9}, {
+   3.97827538312002*^9, 3.9782753936261597`*^9}, {3.9782754282458057`*^9, 
+   3.978275444063053*^9}, {3.97827553571974*^9, 3.9782756319471016`*^9}, {
+   3.978275711148329*^9, 3.978275714632433*^9}, 3.9782768076939583`*^9, {
+   3.9782776327884407`*^9, 3.9782777612845535`*^9}, {3.978278339634882*^9, 
+   3.978278362157465*^9}},ExpressionUUID->"ff77aff6-8318-844b-bf18-\
+b3cfd720dba6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["CSS    -   ",
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]],
+ StyleBox["a speedruning guide",
+  FontSize->24,
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]]
+}], "Title",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellChangeTimes->{{3.978277949733963*^9, 3.978277956079853*^9}, 
+   3.9782780649861336`*^9},
+ Background->RGBColor[
+  0.95, 0.43, 0.96, 
+   0.33],ExpressionUUID->"7c57724b-aae3-9049-9ebc-883f7c135f8c"],
+
+Cell[TextData[{
+ "The general gist of the thing k jo bomo mi mogl znat nardit je, da je treba \
+sam najprej napisat ime zna\[CHacek]ke, dat { ",
+ StyleBox["~~~",
+  Background->RGBColor[
+   0.8117647058823529, 0.7372549019607844, 0.8392156862745098]],
+ " } in ",
+ StyleBox["znotrej njih",
+  Background->RGBColor[
+   0.8117647058823529, 0.7372549019607844, 0.8392156862745098]],
+ "  dat vse svoje specifications za tekst k ga ta zna\[CHacek]ka in /zna\
+\[CHacek]ka \[OpenCurlyDoubleQuote]objemata\[CloseCurlyDoubleQuote]. Oh, also \
+the general rule je, da \[CHacek]e ho\[CHacek]\[SHacek] znotrej { } specifyat \
+ve\[CHacek] stvari to ponavad daje\[SHacek] v nove vrstice/lines, zato da je \
+bolj pregledno (A/N: ",
+ StyleBox["te unrealistic body standardi so se \[SHacek]e sm raz\[SHacek]irl \
+tsk tsk - we even want code to tall and thin... I\[CloseCurlyQuote]m funny \
+right guys?!? Guys..? *the crowd is half-way through done with the process of \
+leaving the stadium by now* Man... :(",
+  FontSize->10],
+ "  )\n\n Honestly mostly I think you can just look at the 04-css vaje ampak \
+for the sake of celovita obravnava I\[CloseCurlyQuote]ll copy some of the \
+less intuitive commands:\n \t\[Rule] Tuki spodi je stvar k men ne gre ker se \
+to kar je spodi narisan ne sklada s tem kar mor\[SHacek] napisat v dokumentu \
+- oz mo\[ZHacek]no je da je slika nekoliko pomankljiva in nima vseh \
+\[CHacek]rt z imeni. Npr. na 04-css smo morali pisati \
+\[OpenCurlyDoubleQuote]margin-top\[CloseCurlyDoubleQuote], \
+\[OpenCurlyDoubleQuote]border-top\[CloseCurlyDoubleQuote] in \
+\[OpenCurlyDoubleQuote]padding-top\[CloseCurlyDoubleQuote], in bli expected \
+da intuitivno razume\[SHacek] kaj je razlika kt \[CHacek]e bi uporabu sam \
+\[OpenCurlyDoubleQuote]padding\[CloseCurlyDoubleQuote] ampak tukej na tej \
+slike ne sam da tega ni tud imena so lowk ass. Seveda pa smo mogl uporablat \
+tud stvari k jih ni v tem slovar\[CHacek]ku - npr. \
+\[OpenCurlyDoubleQuote]background\[CloseCurlyDoubleQuote] zato nism \
+\[CHacek]ist zihr kere vse elemnte tega to obsega. \[CapitalSHacek]e en \
+command k mi gre na \[ZHacek]ivce je \[OpenCurlyDoubleQuote]float\
+\[CloseCurlyDoubleQuote], \[OpenCurlyDoubleQuote]border-radius\
+\[CloseCurlyDoubleQuote]. Aja \[SHacek]e ena stvar - ta slovar\[CHacek]ek \
+besedo rob uporab za \[CHacek]ist vsako definicijo so be caucious \[CHacek]e \
+jo dobi\[SHacek] na dejanskem testu ker je neumn da ne ve\[SHacek] kaj to\
+\[CHacek]n mislejo in pol faila\[SHacek] zarad tega. \n \t\[Rule] ok actually \
+to se da razumet sam dokumentacija je ful dolga. najde\[SHacek] jo kle: \
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_\
+basics/Box_model#the_standard_css_box_model\n",
+ Cell[BoxData[
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1: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
+c8/FxcUdO3ZMAcF4qQpDhxJHYWHh1KlTW7Ro0b59e39//8jIyDlz5ijmeELo
+CAoKKp44fnKFjk6dOt1yyy2hoaGXDB1NmzbV+9IRoaJ/hAuyV+jwtFqIyiB0
+AG7naV3KZYWOevXqbdq0yfiSwmAMxRs1atSkSZOEhIRLLrBz584LFiwwnsnJ
+yVHi6Nix4yOPPKIVGVeReuutt5Q73B46LvlOLx46lK1q1qypd3TZf4+Ksnvo
+oLwKVrOivOr7779XZ66Oq1WrVn/6058iIiLUw58+fdpssGHDhp49e9aoUWPE
+iBHm3TTy8vL8/PzUyVxW6DDu5acf77zzTq3xk08+MSpC33zzTTeGDrO8Spth
+Xn7KLK9SlLj//vs1Yc5udMjmhbbM8qrGjRsrPRkXEK5a9godnlYLURmEDsDt
+PK1LKc+Q3iw6qlOnjrpo86JMZtFRw4YN27dvb1yZtvwZYePGjaNGjapdu7aW
+oM4/Pj5+69atxtmO7god5X+n5uxKIuaFtszyKmUTrVcTlf77lJfdQwflVbCa
+FTcH/OKLL/Th6ty58y233BIQEKA+7SsXBQSj1kj9xsCBA//whz/06tXLuOSF
+ZtFAvVOnTjfddNNlhQ7NGxwc3Lx5c/UtWuyXX35pnkjuxtChI1pUVJQClLrH
+4ieSq83gwYPvuOMORYmVK1ea56Gra50+fXpqamqJE8n1knKZIltV/XWKb7mN
+Qoen1UJUBqEDcDtP61LKM6Q3TiR/4YUXbrvtNh1AzdOrdQydP3/+/fff/+CD
+D/r5+Rn3sFBwMG6P1a9fP00XP5G8REZYtGhR9+7dr7/+eh001ecXP5HcXaGj
+/O/UPA/9mWeeiY6OTk5OLn4iea1atZRN5s6da8FfrGx2Dx2UV8Fq1t0c8Pbb
+b7/nnnvGjh2rUfdyF3Ujesm4uJPG2Bp7169f/9VXX9X4PDw8XAFEIeXKK6+8
+rNBx9OjR2bNnP/nkk+pehg8fru7FvGSuG0PH999/r85WiUPPm5fM1dt87bXX
+mjZt2qhRozlz5ugoYF5xV/mrRYsW2uwSl8zt2bPntm3b9Burqr9O8S23Uejw
+tFqIyiB0AG7naV1KeYb0xiVzdcio52JeSHbo0KGtW7e++eabfXx84uLijL5F
+h9rHHnusbt26egwNDS1+ydwSGUGz9O7d+8Ybb9RCgoODIyMjzUvmuit0lP+d
+mlfcveuuuzp06KDxRvFL5mqM8c4772zfvt2Cv1jZ7B46KK+C1aq8vConJ2fW
+rFmKG9dee636McUB8y6B3bt3Ny4A+9VXX6kfeOONNzTS1rBcg3MfF3V0d955
+52WFju+++y4tLW306NHNmjXT6F1LUG/Tp08fdU3ahmeffVZdkzFXdYYOOXbs
+mIKGr6+vQocimN6+HjWtpU2YMEFd0/Hjx817C2oJf3Yxb6eo9/L888+rjzLv
+Wli17BU6PK0WojIIHYDbeVqXUv4h/bp164YPH96mTZtWrVoZt8xr5dKzZ091
+3WaJUXp6+qhRo3T8NW4OqOUod+Tm5pZeYHJyclRUVNu2bZs2bdqyZctOnTo9
+99xzzzzzjIbxzZs3HzhwoPHVSXWGjvK/U/Pegnpeh3sdTI17CBo3N+zfv//H
+H39s3rWwGtg9dFBeBatVeXmVIsDkyZM1ur6vLN26dTPOUDBuIKgM0tJF3Uhw
+cPDs2bOVF8w2etS0huKRkZHm1WhFfZcxo54v8Yy6Go3tp06dGhgY+NJLL6nD
+1FqMNmqsBmqmxuaiSqxCw3t1sA0aNFBnq+054uppS6yrOM2i5zW7uc2mH3/8
+8cSJE1p7QECAukFt2MMPP6xNmjt3rnmWhzG7lj9o0KD58+drQimsUaNGCh39
++vVT3rGisMpgr9DhabUQlUHoANzO07oUdQsdOnTQ8DskJKT4HbT140MPPeTr
+66vIYDxz6NChnTt36vCkwXaTJk10tNLxws/PLy4urviM+/fvN07WeOyxx3Tk
+7dWrlw70OTk5pRcomlHPa+1ampapxhMmTHjxxRd1wHr77bf37NlTzi3UYUXj
+VR3Orr/++u7duy9atMhcsuY1TjYpQXNpXi2h9JkX5Xmnml2re+WVV4zz3xWd
+Grm0b99+3Lhx+g3o91C5v8zlsXvooLwKVqvy8qrvvvuusLBw7969mWXRWMsY
+bxs3EMzPz892OXDggD6wGoSrnzHb6FHT6jRK/G//8ePHjRnNJGI+o0NJbm7u
+F198UVBQoGXm5eVpLUYbNVYDNTPP1y69Cj1qQHj33Xc/+eSTSkD6sfS6ijNm
+0ezmNhen3KG1Gxcz/8xFm/Tll1+qpXEhL2P2fBc9b6woKytLvz1t+f/93/8V
+P/u+atkrdHhaLURlEDoAt/O0LkVjdfUMSUlJ5lcVBv24bdu2lJQU87/rjbOk
+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
+9z389nDi0jDf8RsTY87/3X6bGenv12P8uZsDFv0ecuJn6Y++5LNfFnXZoaPo
+VoB5m41pJQ7ljsuaHQAAAFWg6HyKi5dFnUycGdDxeb+us8ybA578LDaiV9G1
+lfy6DpsVm100wjyvPl8yl5S4DNSFXeTuHq4VveK6hNErgUPm7ygsddGmyvhq
+f8KC8FDfPoONSyR19Z2oDFJiFaVHuacPxhXPHV9lrhnjbyxhcI+Rs2KLbjJY
++gTwk+lKTD5+HX0G91ps3Ea81M0BL7WcwqQlQ/x/2dSJ63JKfCnw7Z4lvq7f
+VVf/GGOUbm3oKHKmMHHJkCEBXY3LTL0S4BceX/peJ653Fz9x5M/NuvqHRm48
+/G2ZCeLssV1LI879RQb3GBI6bd3Pt0o3VPCO5AAAAPAGGh6XvPwUAAAAAFSZ
+Xy6RCgAAAABVL31ugHU3zgAAAADgLKWuVvTtp7N69InadaqsxgAAAABwWQrW
++A0pdg2l40WXIfJ5ZWLsJW/qBgAAAADlcfab9HVRv1xDqU/QkPkJ+6rsGrYA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAACANzu8oHeDJq30760Ed29KNTmxbqjeb7e3E08Xe/J0wsRu+iU8u/hI
+Fawhf9mzrl9pg7eTqmBpAAAAgKc5e3p/4rIpQ/u169jJSBOuf39q/tTzT/Uf
+/96GQ9+f39x5oeOnn75Y1+vh/8/e/b/EleeJ/v9f6ielftCVxrLBbGVxq7jd
+Td0hW05npJrbriztFkimmNji1rRI7GDcno10mDhsrn7oTLxLpprNSCCgdDAi
+1E2HJuu0m3FaWuJ2XO9mMU4GawhUQYGfc97v8/1bnVITvz0fFMN05Xjqfd7n
+1KnX67y/nWn860uLJe2N0uKlM0ol/OTXT6sHsX+SDgAAAJxYlf/8avy9tjOW
+XMP1+slv/tP+N6cx6VCO+v+oR33mk6/VtKP09cd/rdTA+5+vHNDeSToAAABw
+Mv350T9+YM0vWv+H2rTxyac/73rvfbPVg6RDqv7wzz9Rjvqdjx/811f/oFbO
+mX/8/YHtnKQDAAAAJ1Fp9ud6uvGj3l99/Z8V1xaVPz8t/ubjT35L0qFZmUwY
+Odpfjy2+Org9k3QAAADgBPr9p3+pxc8X7v65rr88vUnH7u4ffvm+OPZ3Pn5Q
+X6XVQNIBAACAk+c/fv2ejHLfm/xDnX96mpOO14WkAwAAACfP4iW/IRs1kXQc
+PJIOAAAAnDy/G2+lpePoIOkAAADAyfPq/gVtTHTdwxNCJR2VP/7h7uTH2Q/O
+6CNHGt9658yPf/rJza+fusdfr+oDtGtkQH/8l7+Ve3v/81XH4fyweHPiwv96
+v9WY/vcvf9T1s8l/XfU7tK8/tjX0qFMHd/1Vh/pO2zufeQX+pdXFLz796Xvv
+vdNsrmPyQfenv1nccI/Al9vf+/xnf5+Q+/yLM81/9X5QeYKTjv/4zd+8pR3X
+e//4byWPLQAAAIAjqLL4iT4p7lsffFqsI++omXS8eBC49sdbP+r90rHg4Pef
+/08tA/r0d/4fbOQmf/vbF8ab1T9+NfpBs99n+UbptqTjqX5E3sf1p68/+3FH
++HVMdis//MtPf+S3/Zl/uP/CvZ5gQNLxp0WxJsgZc5UQAAAA4LjQVrjTA9qf
+/ubRtvdDe4fApOPPv/ulGcA3/9XfX/in39z7avGrr+5/8U8/7/orM3R35AIv
+vvx7ba2Q0X/z+9w//Op9bbqtryzlNML1v+ho/V8//+RXv/1K+bgvJy9Y0oQL
+s+6Uykw6/lAcO2PPC2zH9R+/6TISqLfe+ZufjX3+pXI4i/duTlzIvOORdJR+
+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
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACcYAsDLZGGrslnh10OP6+Kg+0t
+2Xsl+V9bX/ZG2kcWXtWzh2fTqYaWyEDxYMu1MdUVaWjJPTjYvR6KYk6pn3PT
+G3X90eup1SNpT/WzW1kYSkT6Znfkfz2fyUQTg4sV459P0PVzLL2O+g+xzxpX
+xclzwL8vD/KR03LbAYBjp7L1qDDYk461tqj36oaWxrfTmaHCUsnc4qgnHbu7
+O/fzzdHewvPd3afTqWg8d79U+2+sSDpqCBFUPyukm1oiZ8fMdI+ko6bSfK61
+JfPl9m51fbKzpfni/I7lH1/n9VNZuJSINLSlpzdfx95PhjeSdHidiMCr4uQh
+6QCAU6G6ffdiQs81UvGOVPxsXP6n9af26Ccdyu/03b6WyIdjw50t5kPC8Eg6
+aiDpCLbXpEPJl+/1R6K9w5e7ItH+u/ZcmaTjcB1a0hF4VZw8JzHp2F65PZ5J
+ji0caiEA4EiRv4Cxj6aXXlreLW8/nLpwddF84zgkHbIfQktEtnfUi6SjBrpX
+Bdt70qHEJ4UP1TRffbJtd4Kun2PpkLpXSb5XxclzEpMOcUNoyC8caiEA4ChZ
+vdqh3Bj779Ya/nA8ko79IOmogaQj2H6SDl8n6Po5lg416ThFSDoA4BQIe2Mk
+6dibExRgkHQEI+k4gUg63gySDgA4BTYnzyk3xkTuQY1Ow94/CuXNhal8Wh8D
+EmlNpAemF56Zs6w8vKT+U/q2u3vA9q2M8iepq9/J/6xsPZkZNUeytzWfz996
+bC+SEb5WSwtXuprVblTdt4xO0NXSyp3xTCreaJZkZsXWfFPZmB3PvKsVtfnd
+3tHZzbLn/k2lhQEx2qVzeq0aUDdiz7aPnjUiT58Ao7KxOJ07n1CPQvmTaDx2
+Pj+5aCnPo7Fm5f1MYcv1YVu3u5U/iV9bNd96uXxroLu5SeyqKZ4eKNh6ylnO
+XfnZvFLJ8kPVGrjvOi/lzbkrvcm327RaOtudu2dUsUdQvSaOLtKeXyj5bGPW
+amnpdj4t9xyNJ/umHYV0CH3leHm1rl6WHcYZSWeuzG/YTnY9dbKrb9Ok7S07
+tbxTdUcUPklHrbNT9/VTKuba1S1TU+vWvew8LuTOaztpfLs7d1sppH8Vee1c
+/qf366OZLUe9fV/IJtWz2XjpG3kUNb7C8krwfEUvFF7UVWN2ofYc4g4TXEXy
+q9Fao1Q7382Yl4ryKane0TurjhPhPqded4mgqyL8Z3kxL1TrNeNxSww63aIA
+YS45cTZjRr1dUr6J8kfH9mvi9/ti1rly0+gZn3vmnsLLVlHaV9iddFh+Pswb
+kTyPHldBrfuz10dbzpG8OThe4l5RXZ/MtEWaLuylAzAAHH/qcEX1vpoedP3i
+WHn8KDyd6WnXg7qLI4NDeS2kjyYGjRTmyUTcMxL7TrxvBNXyN0L9WckPDo3k
+elLiNm6fJVL71ZhfupzQb+N6eUrfDL+r/6j1KSXpF78pltJW1wsfJcyiXuyN
+i1/q2KVi2bl/43eqtDQuYrDOqbWAejESk9au7JC6ZxGxm7GoRzhhFMY8Xi3o
+jQ0V9fHvstub+9Hf6tWk8n73Lf03a+fRWDIqg6h+ZVfZTnEKmrpvuX7Qr9+f
+TkVbmjstmzW0ZWctv7h6NCu3ycl4xqwQZ1C9da8/JjKOOTP68ks6ZtRaakpZ
+K7/GnMYhrxwPMqRRoyD1jAz1p2TQ0mnbVdg6UWr4QT6mxzM5/WTFBvI9IZKO
+EGenzuuntHy1U2QcN9YtV2Xp4eW09fqXh9yYKQQ3uzh2vrU4NajWmOWV71Vr
+O2peh9p94JEYPCW/hvIKqfkVflG87tj50EimQxzLTXMAdZjr2SnMnsPcYQKq
+6E5x8Kxxo+vXc+euyafWbfWzoBd+sE9LnRoztqcWIZKOGldF+M/yIi/Uqbmb
+3Y36n5u3oIGidQoO39Md8pJTJxK0fBllITvzuVSIpEP/fdG/d+KURRPDtlNW
+UucWNs+s/A1qy+Yu+CQdXjei1MSKtcZC3Z+Dz9FqQb0IxXenIZXRrsmZlV0z
+QU5Pn/xxOgDgae3LCzKsipy9cNXjeY7K+aNQXR5WfxESPbetwc/uzqKIGcyh
+3DJIdgbPK9dSysdlZ/Wfj8WJninbU7Lyt+PqHfvDGTO2lLfrTHe6/cKk7RHl
+5qQIw5KXi5Y9VDbuTN3VIw6Zp8QG5s0NyuvX1b9KDD+271//ndKe4XdOeD0H
+s5CxcWZ6w1L4ncfLAU+qtcJ8VLDlMi+LMm8yBo3KKkpN2WcWkiF3bl77U23g
+fNf1780f4p37Iki2VJ04d+rvtXUa4Z07ItnsmFjR31kZVz8xbYkA1aeC33q3
+dGiheHv/XdsjO5+kI9rSaM3dlMo/ZztYL+GuHA+btwbGbE9Eq6VCn7KruHmu
+Q9eJUcNXv7VcBy/nZXZWI+kIc3bqun7E7KnqVTG+bI0M1VVpHNlxtTQnIqLg
+Mci1+vloYZWx/M2uVm/pdCaRHLI3HoX5Cttpl5B1orlw13NNHnuuv3iSNs9G
+e8J+e9GfSFiSX+0svDu2YJuRY/2WiGBjl5cd+wxKOmpdFeE/y4u4UFsTsbMX
+blnqeff5bLZdfE0eme/5ne5Ql5z+G5G9Z7kItRtvraRD/1vr17P8/ZSawrSP
+LenVohfDdpfWfoM8kw7njWh5VL3JKFe4WQ8h7881z5FP96rNW5k2120TAE4X
+tQPJh3oLwllHVK9y/CjIu32zpandIMNCo/+PR3cg+Ri/dexh0BM5+ajfcsfW
+nhElrKGjWvJZESgGzJH7YiajbJC0P87a1bowNRs/0JakQ3uG/+7Yw5r9L8QT
+1Gb/X3lnOCEL43nsMqFI6hHv80La+p+CyAvMqGDpctwREwqyA1Kv0WVFBtjx
+8VX7ZnpjyqZ1s7ijei0svTK+nRC//hcKT3230WhnzWyakcqyfS2w0/VerxwP
+8uOsGVzIOpE17NHLS4YcgUlHqLMT/vqpbt/NJURy/Y39Ul8ebm3xmFVVXj+B
+QXVw0iFDd69H3yFTANdX2Eo2q5kd81Qhr+cavPZcd/F0Wpczj6E6Mik2uvmJ
+s+C6zlWv5rNqJtU/p7fr1U46alwVdXyWFxkMx3MPnJm7di81nmn4nu5Ql5zv
+b0RpVi1kYNIh/9b19ZS9Lo17lG89yOcnXkmHs8zajWhI3zL8/bnWN5cxHQAQ
+rPx0fljvZJK+aesxbv9RqKgrYig/uE+89iJv70ZvFnfw7Ij2NZWtJ8W52xNq
+74WOlN712pV0dNiC8F0jVH6068cdcGpezWat4YSedGiPSc+O1Apa5NHJZ7Pp
+wdn1slck7AgnZGHcP6aC3tVZK6lr8EL1G/VHtnVsSftvETVF8wuuz5W/ucaH
++mUTcxdt7+uPT0fmnnq2I2hB9ZrsMtHUPenMOHZ9kw53jPp0Kqm8f3He64N0
+Ya8cL6/WH87OTl5Ru0bE9cEdrqSjZp2sX1f7gXjO7VZzTEe4sxP2+tEaHewd
+PASZ/nikb7WD6qCkQxbM1QVORqHWJ8MWtb7CJjkZrKN3U9jrOZDnnustnklW
+kbUDmGHtRtqsCnkW+mb9m4lbBvUZyGsnHcFXRT2f5UVcqNGRBfe/VOdz9nus
+9+kOd8mJr5Lnb0TNMR3y98VjXLntZi7vIZ714Demw+9GpL9fx/251jeXpAMA
+wth5LJ5j20eX238U5O3Xb6Ldov2XS89Q9OBZPK2yDwR+OtNzVu8z3JqIp3pz
+WidhV9LhDFODS6IKGh7rTjqSabVpvjU/F3o1rq17+ZhszW9KZa7MrNiHl3qO
+1fWJ2WQlmz/T2i+g8ahfhNyWJ/+ewxXNlz3p8PgFlxGFGepYl4lMugelyl4Z
+6aTa7aHrukfGsRs4kNxOvl9jrqcQV46H0sMraW1oZ0Nbc0dK7XPe4+yrFq5O
+HFey60iDko6wZyfM9RN/V41vvZellvGV72tPSYfWj8vjLMv+Nh5nP8xXWCf7
+LqZurNvfDltjAXz2XF/xrALyMi0fkReVOAs+warzWx9mIHnQVVHPZ3kJmGbN
+eVV7n+5Ql1zAnblm0qENy/J71a7zgIHkDvYbUV335+BvLkkHAIT1eCxm/2Hy
++lHIzwU84UlNren/LVvttV+HajEXtQ8EflUcbBePjO6sbpkPrbSPWDDe8P7V
+CC6JSgvbepxDTbXXr4pb1v1/lM/JsSpfuuKWAGIWL23Asv1vPZOO3H3v3Th/
+4mVnCT3oFf9q7UsgswAxjNHrVfjOutsQSYc8lGfFyYEubdoWWwcqeVrzOW0E
+zTde/dkONumodeV42bgpF7ucWLC214ggZI9JR7jwzDvpCHF2xHHWuH56BuQI
+Gnd/Nr2bhxgL7/Wa8cqYbDt3R9RrN2Q47fEV8K63kF9h6emUbAl1jXeup8Y8
++e25ruLZ1U46bpoBcNKd7Fh3ct/+nzVmr/K/Kur5LC+1rmpLI4j36Q51yQVU
+b8ikwxiC7XxdX9yuUQ/7SzrC3p93g765JB0AEJrnIy/jR0H2YQjsXmVtyLb0
+C5JhpG0g8OJIxKPPjOyvWzPpCCyJIHsNeXaQ8Ci2sn9t1hT7+MdQKluPtEai
+0W+1t5wTBPn0VRbkT62t77rZh1kmIJbu1nrPaq9uEnZ1JR2a8vZDOVS2fVzv
+zaXHKvpcYY7hzLZtjDf2l3TUuHI8yFkFnP3/tWug/qRjMOqT0sqOKEFJR9iz
+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
+imsl7YyUH4+rjS8X5x2FzN23lHtxRK2BgULhw5bYRxMLT9W/LX8n86b09ZMw
+szQA4GB4Zhzytc89ywDM/tCy3qTDOWVNWYzkjQwVAz9Ze5pn7E2LK8xQUKrc
+FTGY9dn1fpIOr83EZEfyQaV1S0sKEED7fX/g9W/V9clOZ+OCDLbd420fXoqr
+UdxjexlC1IZb+CPVn0UnjM+1FrL50jcex3tNPd648XhZtGFZ40Mn76RjeVh9
+pN99yx2OvprPqqFv/5weSdZzOmS/FPelayEXlWjPL5gXbZ1Jh1KBT+wbysyr
+1kIVrksl7N72lXTs5+RqJYznHjj71JVnxXc8N2/vZCVqrMP+bH8PZNR9zlkD
+Nb8OvodWmlUvqgNIOuQF1tLcms5Zm4S0llz74xfX9SObnGID8/ZeduK7YB2F
+9HisWdzbU1Prtg9/PpNRvxpdV7+13XDlUVvmK5aFtKXeazfSMmuLD1lv9bKE
+risQAHCKva6WDvkr1j5iX+GizqTD1nNYkN2ene9Xtp4U525PqF19OlL64A5n
+0mH0IjDIn0vr+/tJOjyXEpAfYTTNyC395uEpv1hdmC1cHRrJnk/F9S7xnkmH
+jDHsnyjDJI9QR2ZqqalNaxnC1MZ+jlQ7g84oURbSJxSRf2KExFoglB6cXS97
+JgWeSYeMq/tm3eMCdrXza0aSwafDTgRRQVeCjMds/frqTjrco9Sr857v17pU
+wu5tX0nHfk6u1hYzsuDeUhbSlV/MXayV9HmqVtYezd+dGle753Xogx1cSUfN
+r4P4dM9DO6gxHaIpR/ly3bClA9pjlta8vYvd+vWU6CUlvxfPC2mxjXM5IVnn
+lu/Cxs0urV+W/QslnkuYtwj7gZjPK3arxVzUcWq07Ew5s/Z5pGW11Gg5BQCc
+Kgc4psMkn8M3dLna1usfSO7gjjOfzvSc1YvdmoinenNa93Vn0uGO3rUQ2vJT
+u9+B5D7/5Aj4bZ0TpOp6Iat3j9cGb2pd0N27lU1IzRfn7c9m5a+878tZhhC1
+sZ8j1c6UpWOGpZB+oUjREW2ancybUpkrMyueY9UdZ+eBq8+5q5COHNDjdHio
+kXSsycO3R4x7Gkju4PpqhLpUwu5tX0nHvk5uwDfL+y4hClZf0rHzaDxpH1I9
+OCRGmbmSjlpfh4BDO6CkQz5Occ3QtXRZPbPp2/acSLbX6BmcXxOnTFiSlmtS
+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
+DwcAADg0n43/8kzHe0ogpPyv8v/fwCeSdBy2E1Ene0467ueVyy/y4czWayhU
+TYwiBwAAp9BPPvg7NQCzvJR39rPDne9mRnvSzU1yb23Nqd7RO6s79jGzZtJR
+3py70ptsFRs3xdMDhaWXPlu+LI52xtXNMgUzVC5vLkzl02fjWuFbE+mB6YVn
+FXuJzAB753Ehdz7eKDZufrd3dHaz7Cj9q3V1hx3aNpHWdObK/IZzIx8vVwvK
+sbzdJgvT+LbytzMrtsMRJfF+JUa/Dfcpb7ZOdh6MxKItsSs1+gKVX4hj1z+0
+8e3u3O1l+0k3PrGyMTueeVdsGY0ne8bnnnvt8Nm8eRW1prNTyt5k7eUXjI32
+mnSsjKeU3cbHV3fL64WBruaouFDPj3mUxFaZysXcP/m4ZN9iu/Ch6Kn1bLf8
+fSGbVM9+TNmzwXlVpMRBOUeRK2dhUDneqHbliOM1/3Xpctx5xrOzO/UeNgAA
+wCH5bPyXnjHwXts7Sg8vp7Xw7Hz/4NDIYF+3jBsbM9NrliBKC5vvFAfPisD+
+4sjgUH9aBmbRrsmnri3vLw+368Uzns8/nelp11MDdQ95PZRNDD6wRoYy3J2a
+u9ndqBcspwd4sYGiJXjbnDynxczZIbVIKZkNhRjzu/NoLBm1/a12OE3dlsNZ
+Laj/ZHtlz4kwdagYMrN5w3WyMCDzwbGHQSXSkiklZ8kpB3WxNy5Ouv2g9E9U
+Ch+Np/os1dvUP2cP5Hce5GOWHcqCxQbyPQeTdMg0Qb38hs/ar/z2sSVrLmBU
+pu3Vlp62DgVZvdohkoin06moto3RdWrtywuxqHsP9iuqun33YsK9jaX2Knf7
+RF7zbTGnl4chIQAA4BiRvarcL+X9PexNdlaPvDu2YH28X16/9ZEaU8UsYZIM
+m2PtieTlouWJbmlpvEs+t9+yb5nOdMc+mrY1glRlyJ3oub1uezK/KIL/aG/B
+fGotwt3WROzshVvfWx74P5/NqnuIDz8y3tq8NTA2Z20UqJYKfWKbx4FH/nwm
+o35oenjRGj1X1m5fiLlDWSsZqSYnVuqZPfVN1kl5cUwJm5PXLI/uPRSvZu0l
+KS+PJpX99BZe2D9RKUZ7fs7YUqte0ehglkFWZtfVby2V+XJej7f3nXTIyaMa
+UulMIpadfvhCPfzy0xlx4C3ZWb02SlqEH/toYuH7klqf5e2H8vqM9s+90vf2
+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
+iF/9ko6ZhYFEpCmVuTgyeLE3LtOB1MSKJa6WiYAa1feNqHvuFEFy1BLGy101
+tKSng3oB1d6PkXTcKebaWxqTvbmhkVxPqlHsPHnNPkRaO141JckOjQz2iYC8
+M59LHVDSIQZTRC7Ol59Op5ts5zRmH2Gx8+2EYwPncYldOYb2e/9Vg71t5elU
+UmYQpeLgWftmRgrzWKSijtfF+TqPFgAAAMeA7FXlfinv17ur8mx/RLZBWL2a
+zyoxdnJiRftvRxKhDUAYXLQ8YC9vLj0xsgCfpCPa0tg5tVY2/mR5NNniGI+8
+MZ0fnt00NlHs3Om3j27evJVpi7T33w1s6QixHz0xibalbqybhfp2PO6IxqvL
+w+3KO4nsPUuaU16/3imr/QCSjqXLak6UGp/OtbclL82vqR9d2ZjujYh2KHO5
+DS33SaSvzK+VRKW9Wi/0ib/VMz45LiN337L3JxNJkTElh2ZWnmtVXX45k7U3
+Umx9KT5uYHqysy2WnX74Qt1y5/+OidroLbww97dxs+vwx7wDAADgNfPMOOSr
+7n1Vv1H750f75yyjCcr31Pg8fdsviZDdimyBqJ1f0tF/196ZSn5QjXliZZee
+c/tefNC1Hy3p6Ju1d6bSWn8GF7X/ltF486VvnDsszaqp2QEkHZuTIn9pbk3n
+7lsqqDqvVmN0ZEH7bznmIpF7YKvErdvdlqRDbmM5NZ4Z067eZmGp+YUhWYaE
+NQXb3V2/LltzzF5Yu3MXQw79AAAAwDF2gC0dioeX1Efl2VmjuWH7VsaRUziT
+CHUJ8oaW2Efa83AXn6TDPdBAdulxvF+trD2avzs1PnixN9mhD8rYQ9JRaz8y
+6XA/sXfMXusfYx/QmA6ZXLj6RGnLBRqrZog0Qc99KjsvtjeezE8OpEV/sNTV
+7+SuijklD+owmqi0lKR5oFi27dp97DK5cKdgYsy4mfjsaiun294BAADACXRw
+YzqEJxNxc8y4Prrc+E+VK4koLV/NtMkPbe7MTy5u2mNa/4HkDvJ9y5Y7j8aT
++uiDxrdT8fP9g0O98fqTjjD7MQeS28n39bYDmVl4zit1QEmHrH/3cH6xXKDR
+H0z2m/J4NaVHF0u2XZmDLPwmpJKtOZb3tRHi3bccndbcw9LlO32zjiwGAAAA
+J8/BzF6lUdcWN+JqEXIbQ8glr9mrlMD+u5lRfeR15N0xc46jPScdz8SYhfYL
+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
+     "], {{0, 371.}, {531.5, 0}}, {0, 255},
+     ColorFunction->RGBColor,
+     ImageResolution->{144., 144.},
+     RasterInterpolation->"High"],
+    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+    Selectable->False],
+   DefaultBaseStyle->"ImageGraphics",
+   ImageSize->Automatic,
+   ImageSizeRaw->{531.5, 371.},
+   PlotRange->{{0, 531.5}, {0, 371.}}]], "Input",ExpressionUUID->
+  "9061843f-f071-dc40-a68a-2564e034d334"],
+ " \n\n\t\[Rule]pu\[SHacek]\[CHacek]am space za ostale mo\[ZHacek]ne comande \
+kle\n\t\nPredn gremo na dejanske primere mor\[SHacek] vedt \[SHacek]e \
+\[OpenCurlyDoubleQuote]enote\[CloseCurlyDoubleQuote] za dolo\[CHacek]ene \
+stvari:\n\t\[RuleDelayed] barva/color: no need to stress \
+pi\[SHacek]e\[SHacek] lahko v hex ali rgb ali samo ime barve (pol ti bo sam \
+dal barvo k jo ma vscode poimenovano kt \t     to) ampak je dost \
+la\[ZHacek]i/ve\[CHacek]krat smo uporablal hex (aka. barvo poda\[SHacek] kot \
+npr.\n\t     #AAAAAA , #b00b69 , etc - moral of the story je da uporabla\
+\[SHacek] \[SHacek]tevilke + velike in male \[CHacek]rke )\n\t\[RuleDelayed] \
+velikost [pisave - ponavadi] : pixels (px), procenti (%) -- delujejo kot \
+normal procenti,  in enota (em) - ",
+ StyleBox["not",
+  FontSize->12,
+  FontVariations->{"Underline"->True}],
+ StyleBox[" elemental mastery",
+  FontSize->12],
+ "  -- delujejo \t    as follows 2em = 200% =  2-krat velikost pisave: v \
+primeru dolo\[CHacek]anja velikosti pisave glede na velikost pisave na enem \
+nivoju vi\[SHacek]je \t   (\[CHacek]e pa ta ni dolo\[CHacek]ena, pa glede na \
+privzeto velikost pisave v brskalniku), v primeru dolo\[CHacek]anje \
+\[SHacek]irine elementa pa glede na velikost \t   pisave v elementu.\n\t\n\t\n\
+Ok \[SHacek]e ena pomembna stvar pr css-ju je kako zbira\[SHacek]/grupira\
+\[SHacek] elemente za oblikovanje ker je convoluted asf for no reason. \nkt \
+sm \[ZHacek]e omenila na za\[CHacek]etku je ta najla\[ZHacek]ja stvar da sam \
+zbira\[SHacek] vse elemente k so ozna\[CHacek]eni z neko zna\[CHacek]ko. \n\
+Primer tega ta najbl eazy na\[CHacek]ina je:\n\t\t\t",
+ StyleBox["h2",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ " {\n\t\t\t\t",
+ StyleBox["margin-top",
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ ": ",
+ StyleBox["2",
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]],
+ StyleBox["em",
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ ";\n\t\t\t\t",
+ StyleBox["border-top",
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ ": ",
+ StyleBox["1",
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]],
+ StyleBox["px",
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ " ",
+ StyleBox["#AAAAAA ",
+  FontColor->RGBColor[
+   0.8784313725490196, 0.6274509803921569, 0.3803921568627451]],
+ "solid;\n\t\t\t\t",
+ StyleBox["padding-top",
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ ": ",
+ StyleBox["0.5",
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]],
+ StyleBox["em",
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ ";\n\t \t\t }\n\n",
+ StyleBox["!",
+  FontWeight->"Bold"],
+ " A/N: ",
+ StyleBox["NE POZABT     ",
+  FontSize->12],
+ StyleBox[";",
+  FontSize->12,
+  FontWeight->"Bold"],
+ StyleBox["     NA KONCU VRSTIC/ZA NA\[CapitalSHacek]TEVANJE",
+  FontSize->12],
+ " ",
+ StyleBox["!",
+  FontWeight->"Bold"],
+ "\n\nPoleg tega da lahko zbira\[SHacek] te ta simple zna\[CHacek]ke (to \
+zgorj) lahko zbira\[SHacek] tud: \n\t\[Rule] atribute, \n\t\[Rule] razrede \
+(toj uno k sm yappala pr html sectionu) - nardi\[SHacek] ga v html docu \
+takole:\n\t\t\t",
+ StyleBox["< ",
+  FontSize->15],
+ StyleBox["div",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox["  class= ",
+  FontSize->15],
+ StyleBox["\[OpenCurlyDoubleQuote][",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox["ime classa",
+  FontSize->12,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox["]\[CloseCurlyDoubleQuote]",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.2823529411764706, 0.7411764705882353, 0.6039215686274509]],
+ StyleBox[" >\n\t\t\t[stvar k ho\[CHacek]s da se oblikuje v stilu tega \
+specific classa. npr. <img src= \[OpenCurlyDoubleQuote]whtv\
+\[CloseCurlyDoubleQuote]>  ]\n\t\t\t</",
+  FontSize->15],
+ StyleBox["div",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ StyleBox[" >\n\t\tin pol ga v css docu reja\[SHacek] tkole (primer iz vaj):\n\
+\t\t\t.slika {\n    \t\t\t\t",
+  FontSize->15],
+ StyleBox["border-width",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ StyleBox[": ",
+  FontSize->15],
+ StyleBox["2",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]],
+ StyleBox["px",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ StyleBox[";\n\t\t\t\t",
+  FontSize->15],
+ StyleBox["border-color",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ StyleBox[": red;\n\t\t\t\t",
+  FontSize->15],
+ StyleBox["border-style",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ StyleBox[": solid;\n\t\t\t\t",
+  FontSize->15],
+ StyleBox["font-size",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ StyleBox[": ",
+  FontSize->15],
+ StyleBox["0.9",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]],
+ StyleBox["em",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ StyleBox[";\n\t\t\t\t",
+  FontSize->15],
+ StyleBox["width",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ StyleBox[": ",
+  FontSize->15],
+ StyleBox["40",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]],
+ StyleBox["%",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ StyleBox[";\n\t\t\t\t",
+  FontSize->15],
+ StyleBox["text-align",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ StyleBox[": left;\n\t\t\t\t",
+  FontSize->15],
+ StyleBox["float",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ StyleBox[": right;\n\t\t\t\t",
+  FontSize->15],
+ StyleBox["margin-left",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ StyleBox[":",
+  FontSize->15],
+ StyleBox[" 2",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]],
+ StyleBox["em",
+  FontSize->15,
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ StyleBox[";\n\t\t\t      }\n\t\[Rule] identifikatorju : #\:27e8id-elementa\
+\:27e9 (angl. ID selector) izbere natanko tisto zna\[CHacek]ko v dokumentu, \
+ki ima atribut id z vrednostjo id-\t\t     elementa\n\t\[Rule] univerzalni \
+izbiralec:   *   =   izbere vse zna\[CHacek]ke v docu",
+  FontSize->15],
+ "\n\t\[Rule] Obstajajo \[SHacek]e \[OpenCurlyQuote]psevdo-razredi\
+\[CloseCurlyQuote] s kerimi se da zbrat elemente, k majo posebno stanje. To \
+se usually nardi tko da po koncu izbiralca \t     (npr. zna\[CHacek]ke) zravn \
+prlepi\[SHacek] \[SHacek]e :[",
+ StyleBox["to posebno stanje",
+  FontSize->12],
+ "]. Primer tega so linki -- zna\[CHacek]ka je a, posebna stanja so lahko \
+npr. \t\t\t\t\t      link/visited/hover/active. Skupaj seprav zgleda tkole:\n\
+\t\t\t",
+ StyleBox["a",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ ":link {",
+ StyleBox["color",
+  FontColor->RGBColor[
+   0.5372549019607843, 0.792156862745098, 0.49019607843137253`]],
+ ":",
+ StyleBox["#cc0000",
+  FontColor->RGBColor[
+   0.8784313725490196, 0.6274509803921569, 0.3803921568627451]],
+ "; }\n\t\t\t",
+ StyleBox["a",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ ":visited {}\n\t\t\t",
+ StyleBox["a",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ ":hover {}\n\t\t\t",
+ StyleBox["a",
+  FontColor->RGBColor[
+   0.38823529411764707`, 0.5725490196078431, 0.8784313725490196]],
+ ":active {}\n\nTe ta alleged \[OpenCurlyDoubleQuote]easy\
+\[CloseCurlyDoubleQuote] stvari/izbiralce lahko skp sestavljamo v \
+\[OpenCurlyDoubleQuote]sestavljene izbiralce\[CloseCurlyDoubleQuote]: \n\t\
+\[Rule] copy notesov: Nardi\[SHacek] jih tko da jih stakne\[SHacek] brez \
+presledkov + nejprj napi\[SHacek]e\[SHacek] izbiralec za zna\[CHacek]ke ali \
+univerzalni izbiralec. Primer: \t\t\tp.poudarjeno zdru\[ZHacek]i izbiralca p \
+in .poudarjeno: izbere vse zna\[CHacek]ke p (za odstavke), ki imajo dolo\
+\[CHacek]en atribut class z vrednostjo \t\t\tpoudarjeno.\n\t\[Rule] Sm morm \
+dodat actual primer\n\nPol je pa \[SHacek]e neka stvar k se imenuje \
+gnezdenje:  https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector\
+\n\n\n\n"
+}], "Text",
+ CellChangeTimes->{{3.9782784668724327`*^9, 3.9782786051192493`*^9}, {
+   3.978278637724468*^9, 3.978278639904684*^9}, {3.978279290636423*^9, 
+   3.978279509076124*^9}, {3.978279582023819*^9, 3.978279587917553*^9}, 
+   3.9783438416392746`*^9, 3.978350259148615*^9, {3.978350772441601*^9, 
+   3.978350846827322*^9}, 3.978351110794592*^9, {3.978351383770092*^9, 
+   3.97835171473617*^9}, {3.9783517551494274`*^9, 3.978352002578499*^9}, {
+   3.9783520655220947`*^9, 3.978352091335697*^9}, {3.9783521386504154`*^9, 
+   3.9783521861312695`*^9}, {3.9783522332150993`*^9, 
+   3.9783522822346764`*^9}, {3.978352370364441*^9, 3.978352474052885*^9}, {
+   3.978352527109764*^9, 3.978352621502327*^9}, {3.978353673123167*^9, 
+   3.9783536801394024`*^9}, {3.978354132886387*^9, 3.9783541989626102`*^9}, {
+   3.9783542646404266`*^9, 3.978354270268503*^9}, {3.978354530839472*^9, 
+   3.97835453469866*^9}, {3.978354589810835*^9, 3.9783546922484436`*^9}, {
+   3.9783547334037704`*^9, 3.9783547351221066`*^9}, {3.9783548910851955`*^9, 
+   3.9783549098746605`*^9}, {3.9783549611657734`*^9, 
+   3.9783550327741585`*^9}, {3.9783552026992817`*^9, 3.978355221622946*^9}, {
+   3.978356642569132*^9, 3.9783567582922745`*^9}, {3.97835679204265*^9, 
+   3.978356867778183*^9}, {3.97835691438163*^9, 3.9783570129998646`*^9}, {
+   3.9783571288995934`*^9, 3.978357303981205*^9}, {3.9783574061096935`*^9, 
+   3.978357425280239*^9}, {3.978357456745205*^9, 3.978357479057522*^9}, {
+   3.978357523010025*^9, 3.978357617911934*^9}, {3.9783576534358006`*^9, 
+   3.9783577436446247`*^9}, {3.9783578131494904`*^9, 
+   3.9783580044023438`*^9}, {3.978358043353611*^9, 3.978358255899544*^9}, {
+   3.9783583737816677`*^9, 3.9783584882211514`*^9}, {3.978358592692919*^9, 
+   3.978358750333269*^9}, {3.978358849763098*^9, 
+   3.978358882844063*^9}},ExpressionUUID->"7830bb53-501c-0343-b510-\
+45aa267aee3c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["LATEX    -   ",
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]],
+ StyleBox["a speedruning guide",
+  FontSize->24,
+  FontColor->RGBColor[
+   0.7254901960784313, 0.3176470588235294, 0.8235294117647058]]
+}], "Title",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellChangeTimes->{{3.978358908867796*^9, 3.9783589250799713`*^9}},
+ Background->RGBColor[
+  0.95, 0.43, 0.96, 
+   0.33],ExpressionUUID->"a7f91f41-a21b-5243-a6af-7f05ac44297b"],
+
+Cell[TextData[{
+ "Ok seprav to je mal dal\[SHacek]a stvar ampak the main to\[CHacek]ke so: \n\
+\t\[Rule] za\[CHacek]etet doca/code more met specifyan \
+\[OpenCurlyDoubleQuote]kaj dela\[SHacek]\[CloseCurlyDoubleQuote] \
+(doctype/documentclass, kodiranje znakcov (UTF-8 npr), v kermu jeziku pi\
+\[SHacek]e\[SHacek] \t     pa \[SHacek]e neke random stvari \[CHacek]e ti lih \
+re\[CHacek]ejo da jih mor\[SHacek] vklu\[CHacek]t ampak jih rab\[SHacek] met \
+za npr pisanje ena\[CHacek]b)\n\t\[Rule] predn za\[CHacek]ne\[SHacek] body \
+napi\[SHacek]e\[SHacek] neke neumne stvari k se imenujejo theoremstyle in \
+newcommand \n\t\[Rule] pol dejank lahko za\[CHacek]ne\[SHacek] doc z:    \
+\\begin{document}     (in pol k si kon\[CHacek]ou na konc doca da\[SHacek] \
+\[SHacek]e \\end{document}\n\t\tsm (lahko pa tud pred begin document \
+\[CHacek]e ti je ljub\[SHacek]) lah pol da\[SHacek] avtorja, naslov, datum \
+etc ",
+ StyleBox["(take stvari)",
+  FontSize->12],
+ StyleBox[" ampak da pa se pol \t\t\tdejansko poka\[ZHacek]ejo na pdf-ju mor\
+\[SHacek] (zj pa nujn mor\[SHacek] PO begindocument) nardit ukaz\n\t\t\t\
+\\maketitle     (...in to je to, n\[CHacek] ve\[CHacek])\n\t\[Rule] in pa \
+\[SHacek]e kaj dejansko lahko dela\[SHacek] v tem docu (najbl neumna stvar \
+tuki so matemati\[CHacek]na okolja, tabele, pa neki kvardratki; ampak \t     \
+certainly niso edina stvar k jo lahka dela\[SHacek])\n",
+  FontSize->15],
+ "\n\t\n\t"
+}], "Text",
+ CellChangeTimes->{{3.9783592318974705`*^9, 3.9783596324973145`*^9}, {
+  3.9783596718017426`*^9, 3.9783599131918545`*^9}, {3.978359955439369*^9, 
+  3.9783599579366302`*^9}, {3.9783615234675236`*^9, 
+  3.97836159493046*^9}},ExpressionUUID->"d71aac6b-2194-c24e-8e0f-\
+dc5ad2264a63"],
+
+Cell[TextData[{
+ "DEFINICIJE IZREKI ETC - DELA\[CapitalSHacek] Z \\NEWTHEOREM:\n\t\
+\[Rule]Option 1 -- from scratch\n\t\t\\theoremstyle{stil k ga \[CHacek]\
+\[SHacek]}\n\t\t\\newtheorem{stvar k jo napi\[SHacek]e\[SHacek] za \\begin { \
+~sm not~ } } {\[OpenCurlyDoubleQuote]kako se pojav v kodi\
+\[CloseCurlyDoubleQuote]} [kako se bo \[SHacek]tel/\[SHacek]tevil\[CHacek]il \
+(optional)]\n\t\[Rule]Option 2-- \[CHacek]e pa ho\[CHacek]\[SHacek] da se \
+\[SHacek]e nek drug theorem \[SHacek]teje isto kt ta ta prej\[SHacek]n pol pa \
+zgleda\n\t\t\\theoremstyle{stil k ga \[CHacek]\[SHacek]}\n\t\t\
+\\newtheorem{stvar k jo napi\[SHacek]e\[SHacek] za \\begin { ~sm not~ } } \
+[ime stvari s katero ho\[CHacek]e\[SHacek] da se \[SHacek]teje/\[SHacek]tevil\
+\[CHacek]i ",
+ StyleBox["((ime k si ga dal za \\begin{~sm not~}))",
+  FontSize->10],
+ StyleBox["] \t\t\t\t\t{\[OpenCurlyDoubleQuote]kako se pojav v kodi\
+\[CloseCurlyDoubleQuote]}",
+  FontSize->15]
+}], "Text",
+ CellChangeTimes->{{3.9785294622242775`*^9, 3.978529558331047*^9}, {
+  3.978529616765915*^9, 3.9785298297808323`*^9}, {3.978529875569229*^9, 
+  3.978529924574995*^9}, {3.9785300081012096`*^9, 
+  3.978530133021473*^9}},ExpressionUUID->"91fd81a8-2283-7146-8327-\
+2dc39b01ff45"],
+
+Cell["\<\
+NEW COMMANDS // UKAZI:
+\t\[Rule] zgleda tko
+\t\t\\newcommand{\\kaj bo\[SHacek] napisu v vscode docu}{mat ena\[CHacek]ba \
+za kako nej se ti to spi\[SHacek]e vn v pdf-ju}\
+\>", "Text",
+ CellChangeTimes->{{3.978530151627146*^9, 
+  3.9785302589567337`*^9}},ExpressionUUID->"aa8a2806-36e3-de40-9ca2-\
+c865de63268a"]
+}, Open  ]]
+},
+WindowSize->{960, 532},
+WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
+DockedCells->{},
+TaggingRules-><|
+ "NotebookTemplateVersion" -> 2., "NotebookTemplate" -> True, 
+  "GeneratedNotebookOptions" -> {}|>,
+CellContext->Notebook,
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ce3c1268-b77b-de4f-8ee2-284857b2bfb8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 637, 15, 112, "Title",ExpressionUUID->"3074e4d4-e5c1-e343-8746-f41e3dffe8a7"],
+Cell[1216, 39, 609, 14, 72, "Text",ExpressionUUID->"d86675a4-0c16-0f49-b388-f0d77dac1ed3"],
+Cell[1828, 55, 4232, 105, 292, "Text",ExpressionUUID->"1c4b42d8-d9f3-1546-a736-084c9e3c230a"],
+Cell[6063, 162, 154, 3, 28, "Input",ExpressionUUID->"2cb3810e-3e09-d54e-83f5-23f7b47e3ce1"],
+Cell[6220, 167, 5266, 124, 332, "Text",ExpressionUUID->"8415c5c2-4b94-af40-a90d-8d8a3e4e2762"],
+Cell[11489, 293, 20311, 556, 1195, "Text",ExpressionUUID->"ff77aff6-8318-844b-bf18-b3cfd720dba6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31837, 854, 510, 14, 112, "Title",ExpressionUUID->"7c57724b-aae3-9049-9ebc-883f7c135f8c"],
+Cell[32350, 870, 78930, 1394, 2090, "Text",ExpressionUUID->"7830bb53-501c-0343-b510-45aa267aee3c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[111317, 2269, 486, 13, 112, "Title",ExpressionUUID->"a7f91f41-a21b-5243-a6af-7f05ac44297b"],
+Cell[111806, 2284, 1718, 29, 296, "Text",ExpressionUUID->"d71aac6b-2194-c24e-8e0f-dc5ad2264a63"],
+Cell[113527, 2315, 1234, 22, 186, "Text",ExpressionUUID->"91fd81a8-2283-7146-8327-2dc39b01ff45"],
+Cell[114764, 2339, 321, 8, 77, "Text",ExpressionUUID->"aa8a2806-36e3-de40-9ca2-c865de63268a"]
+}, Open  ]]
+}
+]
+*)
+
