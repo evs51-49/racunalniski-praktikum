@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    116775,       2386]
-NotebookOptionsPosition[    115101,       2350]
-NotebookOutlinePosition[    115660,       2371]
-CellTagsIndexPosition[    115617,       2368]
+NotebookDataLength[    117059,       2393]
+NotebookOptionsPosition[    115261,       2355]
+NotebookOutlinePosition[    115849,       2377]
+CellTagsIndexPosition[    115806,       2374]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2345,7 +2345,12 @@ za kako nej se ti to spi\[SHacek]e vn v pdf-ju}\
 \>", "Text",
  CellChangeTimes->{{3.978530151627146*^9, 
   3.9785302589567337`*^9}},ExpressionUUID->"aa8a2806-36e3-de40-9ca2-\
-c865de63268a"]
+c865de63268a"],
+
+Cell["ya kloniranje", "Text",
+ CellChangeTimes->{{3.9785877614063683`*^9, 
+  3.978587771043993*^9}},ExpressionUUID->"4e72ab41-f033-b54e-874f-\
+5a54037c00fc"]
 }, Open  ]]
 },
 WindowSize->{960, 532},
@@ -2355,6 +2360,7 @@ TaggingRules-><|
  "NotebookTemplateVersion" -> 2., "NotebookTemplate" -> True, 
   "GeneratedNotebookOptions" -> {}|>,
 CellContext->Notebook,
+Magnification:>1. Inherited,
 FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ce3c1268-b77b-de4f-8ee2-284857b2bfb8"
@@ -2386,7 +2392,8 @@ Cell[CellGroupData[{
 Cell[111317, 2269, 486, 13, 112, "Title",ExpressionUUID->"a7f91f41-a21b-5243-a6af-7f05ac44297b"],
 Cell[111806, 2284, 1718, 29, 296, "Text",ExpressionUUID->"d71aac6b-2194-c24e-8e0f-dc5ad2264a63"],
 Cell[113527, 2315, 1234, 22, 186, "Text",ExpressionUUID->"91fd81a8-2283-7146-8327-2dc39b01ff45"],
-Cell[114764, 2339, 321, 8, 77, "Text",ExpressionUUID->"aa8a2806-36e3-de40-9ca2-c865de63268a"]
+Cell[114764, 2339, 321, 8, 77, "Text",ExpressionUUID->"aa8a2806-36e3-de40-9ca2-c865de63268a"],
+Cell[115088, 2349, 157, 3, 33, "Text",ExpressionUUID->"4e72ab41-f033-b54e-874f-5a54037c00fc"]
 }, Open  ]]
 }
 ]
